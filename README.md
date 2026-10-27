@@ -1,19 +1,28 @@
-# Edge-Node-Environmental-Telemetry-and-Visual-Alert-System
+# Edge Node Environmental Telemetry and Visual Alert System
 CS450 Project
 
-Official Project Title: Edge Node Environmental Telemetry and Visual Alert System
+## Section 1: Project Title, Purpose, and Scope
 
-Application Category (Ex: Industrial Telemetry, Environmental Control, Security Monitor, Custom CPS): Environmental Control / Custom CPS
+### Project Title
+Edge Node Environmental Telemetry and Visual Alert System
 
-Project Purpose Statement:
-This project implements a lightweight edge monitoring and remote alerting system designed for industrial server racks or equipment enclosures. The Sense HAT edge node continuously samples ambient temperature, humidity, and physical joystick inputs, transmitting telemetry across the local LAN to an HMI monitoring station. The HMI console visualizes live sensor metrics on a touchscreen display and allows an operator to send manual or threshold-driven alarm signals back to the edge node's LED matrix. Persistent telemetry records are logged directly to a Dockerized MQTT broker. This system provides real-time situational awareness and physical alerting while maintaining network hygiene and auditability across distributed nodes.
+### Purpose
+This project develops a lightweight environmental monitoring and alerting system for industrial or enclosure-based edge computing environments. The system is designed to continuously monitor conditions such as temperature and humidity, provide visual feedback to local operators, and support remote communication through a distributed MQTT-based architecture.
 
-•	HMI Pi Role (Services hosted, UI role, data processing): Hosts a Tkinter touchscreen GUI for displaying live metrics, runs a Dockerized Mosquitto MQTT broker for persistent data logging, and issues alert commands to the edge Pi.
+The goal is to create a simple yet effective edge solution that can detect abnormal environmental conditions in real time and alert users using both local visual indicators and a user-friendly interface.
 
-•	Sense HAT Pi Role (Sensors/actuators polled, daemons hosted): Polls onboard temperature and humidity sensors, reads the hardware joystick, updates its 8x8 LED matrix based on received commands, and runs client socket scripts
+### Scope
+The project focuses on monitoring environmental conditions using Raspberry Pi-based edge hardware and the Sense HAT sensor module. The system includes:
+- Collection of temperature and humidity data
+- Local display and status monitoring via a touchscreen interface
+- MQTT-based communication between system components
+- Visual alerting using the Sense HAT LED matrix
+- Persistent local logging for environmental telemetry
 
-•	Remote Storage / Infrastructure Role (NAS Database, MQTT Broker, or SFTP/SCP Server): Dockerized Mosquitto MQTT broker running on unprivileged port 1883 with local file persistence
+The system is intended for use in a compact deployment environment such as an industrial server rack or enclosed equipment cabinet, where rapid monitoring and local operator awareness are important.
 
-•	Optional Additional Nodes (Other Sandbox Table Pis or PLCs—note table consultation if applicable): None (strictly confined to Table 7 hardware)
+### Application Category
+Environmental Control / Custom CPS
 
-•	Out-of-Scope Boundaries (List 1–2 features your team is intentionally excluding to ensure completion by Week 15): Hardware fan/relay control and cloud database integration are excluded to guarantee delivery by Week 15.
+### Project Context
+This project is implemented as a small-scale cyber-physical system that combines sensing, communication, and operator feedback in a single edge-based monitoring platform. It emphasizes low-cost hardware integration, practical system design, and reliable monitoring for constrained industrial environments.
