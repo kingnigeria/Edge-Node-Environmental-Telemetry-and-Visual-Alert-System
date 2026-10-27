@@ -5,16 +5,8 @@ Official Project Title: Edge Node Environmental Telemetry and Visual Alert Syste
 
 Application Category (Ex: Industrial Telemetry, Environmental Control, Security Monitor, Custom CPS): Environmental Control / Custom CPS
 
-2. Draft Section 1.1: Project Purpose (Problem Statement and Objectives)
-Write a summarizing paragraph (4–6 sentences) defining the real-world or cyber-physical problem your project solves, who the intended user/operator is, and what high-level value the system provides:
-
 Project Purpose Statement:
 This project implements a lightweight edge monitoring and remote alerting system designed for industrial server racks or equipment enclosures. The Sense HAT edge node continuously samples ambient temperature, humidity, and physical joystick inputs, transmitting telemetry across the local LAN to an HMI monitoring station. The HMI console visualizes live sensor metrics on a touchscreen display and allows an operator to send manual or threshold-driven alarm signals back to the edge node's LED matrix. Persistent telemetry records are logged directly to a Dockerized MQTT broker. This system provides real-time situational awareness and physical alerting while maintaining network hygiene and auditability across distributed nodes.
-
-
-
-3. Draft Section 1.2: Project Scope & Hardware Role Mapping
-Define the operational boundaries of your system by specifying exactly what each hardware node in your topology will do (and any external classroom resources you will integrate):
 
 •	HMI Pi Role (Services hosted, UI role, data processing): Hosts a Tkinter touchscreen GUI for displaying live metrics, runs a Dockerized Mosquitto MQTT broker for persistent data logging, and issues alert commands to the edge Pi.
 
